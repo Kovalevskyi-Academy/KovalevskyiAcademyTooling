@@ -12,4 +12,8 @@
 
     <artifactId>cli</artifactId>
     <name>Tooling :: Apps :: CLI</name>
+
+    <build>
+        <finalName>zeus</finalName>
+    </build>
 </project>

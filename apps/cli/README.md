@@ -1,4 +1,4 @@
-#Zeus
+#Project Zeus
 ##CLI utility
 
 zeus download --week=0 --day=0
