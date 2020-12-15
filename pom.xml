@@ -1,51 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <!-- parent pom -->
-    <groupId>com.kovalevskyi.academy.codingbootcamp.tooling</groupId>
-    <artifactId>tooling-monorepo</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>Tooling</name>
+  <!-- parent pom -->
+  <groupId>com.kovalevskyi.academy.codingbootcamp.tooling</groupId>
+  <artifactId>tooling-monorepo</artifactId>
+  <version>${revision}</version>
+  <packaging>pom</packaging>
+  <name>Tooling</name>
 
-    <!-- sub modules -->
-    <modules>
-        <module>apps</module>
-        <module>docs</module>
-    </modules>
+  <!-- sub modules -->
+  <modules>
+    <module>apps</module>
+    <module>docs</module>
+  </modules>
 
-    <properties>
-        <asciidoc.version>2.0.0</asciidoc.version>
-        <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
-        <java.version>13</java.version>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+  <properties>
+    <revision>1.0-SNAPSHOT</revision>
+    <java.version>13</java.version>
+    <maven.minVersion>3.5.0</maven.minVersion>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <build>
-        <plugins>
-            <plugin>
-                <!-- Nice to have, fails the build if multiple versions of same framework is found -->
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>${maven-enforcer-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
-                        <configuration>
-                            <rules>
-                                <dependencyConvergence/>
-                            </rules>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+    <asciidoc.version>2.1.0</asciidoc.version>
+    <junit-jupiter.version>5.3.2</junit-jupiter.version>
+    <com.google.truth.version>1.1</com.google.truth.version>
+
+    <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
+    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+    <maven.compiler.parameters>true</maven.compiler.parameters>
+    <maven.compiler.release>${java.version}</maven.compiler.release>
+    <maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven-compiler-plugin.version}</version>
+          <configuration>
+            <parameters>${maven.compiler.parameters}</parameters>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <!-- Nice to have, fails the build if multiple versions of same framework is found -->
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>${maven-enforcer-plugin.version}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <dependencyConvergence/>
+                <requireMavenVersion>
+                  <version>${maven.minVersion}</version>
+                </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>${junit-jupiter.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-params</artifactId>
+        <version>${junit-jupiter.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.google.truth</groupId>
+        <artifactId>truth</artifactId>
+        <version>${com.google.truth.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>
