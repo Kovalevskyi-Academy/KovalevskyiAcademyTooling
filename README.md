@@ -8,8 +8,8 @@
 
 ## Do you want to contribute?
 
-Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/straybro/KovalevskyiAcademyTooling/blob/master/CONTRIBUTING.md) first.
+Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/straybro/KovalevskyiAcademyTooling/blob/main/CONTRIBUTING.md) first.
 
 ## Version history
 
-See [CHANGELOG.md](https://github.com/straybro/KovalevskyiAcademyTooling/blob/master/CHANGELOG.md) file.
+See [CHANGELOG.md](https://github.com/straybro/KovalevskyiAcademyTooling/blob/main/CHANGELOG.md) file.
