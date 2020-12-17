@@ -1,24 +1,35 @@
 # Project Zeus
-## CLI utility
 
-zeus download --week=0 --day=0
+---
 
-zeus test --week=0 --day=0
+[![Docs](https://github.com/straybro/KovalevskyiAcademyTooling/workflows/Deploy%20documentation/badge.svg)](https://straybro.github.io/KovalevskyiAcademyTooling/)
+[![Build CI](https://github.com/straybro/KovalevskyiAcademyTooling/workflows/Build%20CLI/badge.svg)](https://github.com/straybro/KovalevskyiAcademyTooling/actions?query=workflow%3A%22Build+CLI%22)
+[![google-java-styleguide](https://img.shields.io/badge/style-guide-orange.svg)](https://google.github.io/styleguide/javaguide.html)
 
-zeus show
 
-zeus create-project
+CLI for Java Bootcamp Assignments.
+See [docs](https://straybro.github.io/KovalevskyiAcademyTooling/) to learn more.
 
-zeus init
+## Requirements
 
-zeus login
+Command line testing and submission requires Maven to be in your system's PATH environment variable.
 
-zeus login -i
+## Installation
 
-zeus selfupdate(self-update)
+## Usage
 
 zeus config
 
+zeus self-update
+
 zeus diagnose
 
-zeus archive
+zeus fetch w0d1
+
+zeus build
+
+zeus sanity
+
+zeus test --all
+
+zeus submit
