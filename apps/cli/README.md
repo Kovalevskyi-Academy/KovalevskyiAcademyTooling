@@ -1,6 +1,5 @@
 # Project Zeus
 
----
 
 [![Docs](https://github.com/straybro/KovalevskyiAcademyTooling/workflows/Deploy%20documentation/badge.svg)](https://straybro.github.io/KovalevskyiAcademyTooling/)
 [![Build CI](https://github.com/straybro/KovalevskyiAcademyTooling/workflows/Build%20CLI/badge.svg)](https://github.com/straybro/KovalevskyiAcademyTooling/actions?query=workflow%3A%22Build+CLI%22)
@@ -30,6 +29,6 @@ zeus build
 
 zeus sanity
 
-zeus test --all
+zeus test
 
 zeus submit

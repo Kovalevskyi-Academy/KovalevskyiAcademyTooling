@@ -1,4 +1,4 @@
-# 🧰 Tooling for Kovalevskyi Academy Java Bootcamp
+# 🧰 Tooling for Kovalevskyi Academy Java Coding Bootcamp
 
 ---
 [![Docs](https://github.com/straybro/KovalevskyiAcademyTooling/workflows/Deploy%20documentation/badge.svg)](https://straybro.github.io/KovalevskyiAcademyTooling/)
@@ -9,6 +9,11 @@
 ## Do you want to contribute?
 
 Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/straybro/KovalevskyiAcademyTooling/blob/main/CONTRIBUTING.md) first.
+
+## Bugs / Issues / Feature Requests
+
+Please use the github issue tracker to document any bugs or other issues you
+encounter while using tools from this repository.
 
 ## Version history
 
