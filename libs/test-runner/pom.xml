@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.kovalevskyi.academy.codingbootcamp.tooling</groupId>
+    <artifactId>libs</artifactId>
+    <version>${revision}</version>
+  </parent>
+
+  <artifactId>test-runner</artifactId>
+  <name>Tooling :: Libs :: Test runner</name>
+
+  <properties>
+    <maven-invoker.version>2.1.1</maven-invoker.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-launcher</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.shared</groupId>
+      <artifactId>maven-invoker</artifactId>
+      <version>${maven-invoker.version}</version>
+    </dependency>
+  </dependencies>
+</project>
