@@ -11,7 +11,7 @@ import picocli.CommandLine.IExecutionExceptionHandler;
 
 @Command(mixinStandardHelpOptions = true,
         version = Constants.VERSION,
-        description = "Zeus the Mighty",
+        description = "Talos the Giant Automaton",
         footer = {"", "Press Ctrl-D to exit."})
 public class LauncherCommand implements Callable<Integer> {
   @CommandLine.Option(names = {"-q", "--quiet"},
@@ -29,7 +29,7 @@ public class LauncherCommand implements Callable<Integer> {
   @CommandLine.Option(names = {"-d", "--working-dir"},
       scope = ScopeType.INHERIT,
       description = "If specified, use the given directory as working directory.")
-  private String workingDir;
+  private String workingDirPath;
 
   @CommandLine.Option(names = {"-v", "--verbose"},
       scope = ScopeType.INHERIT,
