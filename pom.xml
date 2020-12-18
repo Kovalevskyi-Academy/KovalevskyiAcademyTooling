@@ -14,6 +14,7 @@
 
   <!-- sub modules -->
   <modules>
+    <module>libs</module>
     <module>apps</module>
     <module>docs</module>
   </modules>
@@ -26,6 +27,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <asciidoc.version>2.1.0</asciidoc.version>
+    <junit-platform-launcher.version>1.7.0</junit-platform-launcher.version>
     <junit-jupiter.version>5.7.0</junit-jupiter.version>
     <com.google.truth.version>1.1</com.google.truth.version>
 
@@ -64,7 +66,12 @@
                 <requireMavenVersion>
                   <version>${maven.minVersion}</version>
                 </requireMavenVersion>
+                <reactorModuleConvergence>
+                  <message>The reactor is not valid</message>
+                  <ignoreModuleDependencies>true</ignoreModuleDependencies>
+                </reactorModuleConvergence>
               </rules>
+              <fail>true</fail>
             </configuration>
           </execution>
         </executions>
@@ -74,6 +81,11 @@
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-launcher</artifactId>
+        <version>${junit-platform-launcher.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-engine</artifactId>

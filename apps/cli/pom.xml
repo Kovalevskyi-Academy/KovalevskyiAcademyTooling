@@ -14,15 +14,13 @@
   <name>Tooling :: Apps :: CLI</name>
 
   <properties>
-    <jar.name>zeus</jar.name>
-    <exec.mainClass>com.kovalevskyi.academy.codingbootcamp.tooling.app.cli.Main</exec.mainClass>
+    <exec.mainClass>com.kovalevskyi.academy.codingbootcamp.tooling.apps.cli.Main</exec.mainClass>
     <maven-assembly-plugin.descriptorSuffix>jar-with-dependencies</maven-assembly-plugin.descriptorSuffix>
 
     <picocli.version>4.5.2</picocli.version>
   </properties>
 
   <build>
-    <finalName>${jar.name}</finalName>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -38,14 +36,12 @@
                 <goal>single</goal>
               </goals>
               <configuration>
-                <!-- get all project dependencies -->
                 <descriptorRefs>
                   <descriptorRef>${maven-assembly-plugin.descriptorSuffix}</descriptorRef>
                 </descriptorRefs>
-                <finalName>${jar.name}</finalName>
                 <appendAssemblyId>false</appendAssemblyId>
-                <!-- MainClass in mainfest make a executable jar -->
                 <archive>
+                  <addMavenDescriptor>false</addMavenDescriptor>
                   <manifest>
                     <mainClass>
                       ${exec.mainClass}
@@ -61,10 +57,7 @@
 
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <!-- annotationProcessorPaths requires maven-compiler-plugin version 3.5 or higher -->
-        <version>${maven-compiler-plugin.version}</version>
         <configuration>
           <annotationProcessorPaths>
             <path>
@@ -80,6 +73,27 @@
       </plugin>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <executable>bash</executable>
+          <arguments>
+            <argument>${project.basedir}/scripts/build-bin-executable.sh</argument>
+            <argument>${project.artifactId}</argument>
+            <argument>${project.version}</argument>
+          </arguments>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

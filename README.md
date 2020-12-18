@@ -1,6 +1,5 @@
-# 🧰 Tooling for Kovalevskyi Academy Java Coding Bootcamp
+# 🧰 Tooling for Kovalevskyi Academy Java Bootcamp
 
----
 [![Docs](https://github.com/straybro/KovalevskyiAcademyTooling/workflows/Deploy%20documentation/badge.svg)](https://straybro.github.io/KovalevskyiAcademyTooling/)
 [![google-java-styleguide](https://img.shields.io/badge/style-guide-orange.svg)](https://google.github.io/styleguide/javaguide.html)
 [![Support Server](https://img.shields.io/discord/785728667241807903.svg?label=Kovalevskyi%20Academy%20Discord&logo=Discord&colorB=7289da&style=flat-square)](https://bit.ly/2K6XQQ2)
