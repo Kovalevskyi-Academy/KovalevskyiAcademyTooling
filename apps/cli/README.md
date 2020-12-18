@@ -15,7 +15,7 @@ Command line testing and submission requires Maven to be in your system's PATH e
 ## Installation
 For both compilation from source and execution `OpenJDK` or any valid JDK is required. Apache Maven >= 3.5 is also required for building from the source.
 
-You can clone the repository and execute `mvn clean package --projects :cli` in the root directory. Then `talos` binary executable will be created in the `target` directory.
+You can clone the repository and execute `mvn clean package -am --projects :cli` in the root directory. Then `talos` binary executable will be created in the `target` directory.
 An instance of `talos` is also copied in `$HOME/.local/bin/` directory. The `$HOME/.local/bin/` can be appended to the `PATH`.
 
 ## Usage
