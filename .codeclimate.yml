@@ -1,0 +1,40 @@
+# required to adjust maintainability checks
+version: "2"
+
+plugins:
+  editorconfig:
+    enabled: true
+    channel: beta
+    config:
+      editorconfig: .editorconfig
+  fixme:
+    enabled: true
+  checkstyle:
+    enabled: true
+    config: '.checkstyle.xml'
+  pmd:
+    enabled: true
+    config:
+      rules:
+        - "java-basic"
+  sonar-java:
+    enabled: true
+    channel: beta
+    checks:
+      squid:S00112: # Requires dedicated exceptions even for tests
+        enabled: false
+
+exclude_paths:
+  - "script/**/*"
+  - "docs/**/*"
+  - ".github/**/*"
+  - "**/target/**/*"
+  - "**/test/java/**/*"
+  - .codeclimate.yml
+  - .checkstyle.xml
+  - .gitignore
+  - .editorconfig
+  - CHANGELOG.{md,markdown,txt,textile}
+  - CONTRIBUTING.{md,markdown,txt,textile}
+  - README.{md,markdown,txt,textile}
+  - LICENSE
