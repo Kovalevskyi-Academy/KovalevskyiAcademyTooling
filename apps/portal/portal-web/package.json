@@ -1,0 +1,27 @@
+{
+  "name": "portal-web",
+  "scripts": {
+    "watch": "gulp watch",
+    "build": "gulp build",
+    "build-prod": "gulp build --env production"
+  },
+  "dependencies": {
+    "mdbootstrap": "^4.19.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-environments": "^1.0.1",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0",
+    "gulp-purgecss": "^3.0.0",
+    "gulp-terser": "^2.0.0",
+    "gulp-uglifycss": "^1.1.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-rev": "^9.0.0",
+    "gulp-rev-rewrite": "^4.0.0"
+  }
+}

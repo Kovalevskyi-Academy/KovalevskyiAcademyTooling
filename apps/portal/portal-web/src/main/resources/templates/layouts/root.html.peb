@@ -21,5 +21,6 @@
 
 {% include './_partials/analytics_snippet.html' %}
 {% block js %}{% endblock %}
+{% block footer_js %}{% endblock %}
 </body>
 </html>
