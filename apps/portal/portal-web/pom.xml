@@ -60,6 +60,12 @@
       <scope>runtime</scope>
     </dependency>
 
+    <dependency>
+      <groupId>io.pebbletemplates</groupId>
+      <artifactId>pebble-spring-boot-starter</artifactId>
+      <version>3.1.4</version>
+    </dependency>
+
     <!-- to enable live reload -->
     <dependency>
       <groupId>org.springframework.boot</groupId>

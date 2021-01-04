@@ -5,6 +5,11 @@ server:
     whitelabel:
       enabled: false
 
+pebble:
+  suffix: .peb
+  cache: false
+  strictVariables: true
+
 spring:
   application:
     name: "Project Pygmalion"

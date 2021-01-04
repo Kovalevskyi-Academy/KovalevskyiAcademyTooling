@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Howdy, stranger! ╭( ͡° ͜ʖ ͡°)╮ -->
+<html class="is-js_no" lang="{{ locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Coding Bootcamp{% endblock %}</title>
+
+  {% include './_partials/favicons.html' %}
+
+  {% block css %}{% endblock%}
+  {% block extra_css %}{% endblock %}
+
+  {% block head_js %}{% endblock%}
+  {% block extra_head %}{% endblock %}
+</head>
+<body class="{{ block("body_class") is not defined ? 'app' : block("body_class") }}">
+
+{% block layout %}{% endblock %}
+
+{% include './_partials/analytics_snippet.html' %}
+{% block js %}{% endblock %}
+</body>
+</html>

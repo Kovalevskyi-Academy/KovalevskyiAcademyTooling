@@ -1,0 +1,7 @@
+{% extends 'layouts/root.html' %}
+
+{% block title %}Ошибка {{ status_code }}. {{ status_text }} {% endblock %}
+{% block layout %}
+    <h1 style="text-align: center;">Возникла ошибка</h1>
+    <p style="font-size:20px; text-align: center;">Что-то сломалось... Мы уже об этом знаем и исправляем! Пожалуйста, попробуйте позже! <a href="/">Перейти на главную</a></p>
+{% endblock %}
