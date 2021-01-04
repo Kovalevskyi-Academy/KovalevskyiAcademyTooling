@@ -18,7 +18,7 @@
     <maven-assembly-plugin.descriptorSuffix>jar-with-dependencies
     </maven-assembly-plugin.descriptorSuffix>
 
-    <picocli.version>4.5.2</picocli.version>
+    <picocli.version>4.6.1</picocli.version>
     <tongfei-progressbar.version>0.9.0</tongfei-progressbar.version>
   </properties>
 
