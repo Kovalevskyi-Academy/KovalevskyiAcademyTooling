@@ -6,7 +6,7 @@
 
   <parent>
     <artifactId>tooling-monorepo</artifactId>
-    <groupId>com.kovalevskyi.academy.codingbootcamp.tooling</groupId>
+    <groupId>com.kovalevskyi.academy.bootcamp.tooling</groupId>
     <version>${revision}</version>
   </parent>
 
