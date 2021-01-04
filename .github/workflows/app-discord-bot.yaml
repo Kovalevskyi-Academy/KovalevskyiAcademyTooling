@@ -1,0 +1,34 @@
+name: Build Discord Bot
+
+on:
+  push:
+    branches:
+      - 'main'
+      - 'dev/*'
+    paths:
+      - 'apps/discord-bot/**'
+
+jobs:
+  build-jar:
+    name: build-jar
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/dev')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 13
+
+      - name: Cache Dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-maven-
+
+      - name: Build with Maven
+        run: mvn clean package --projects :discord-bot --also-make --threads=2 --batch-mode
