@@ -1,0 +1,20 @@
+#debug: true
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  application:
+    name: "Project Pygmalion"
+  profiles:
+    active: dev
+
+---
+spring.config.activate.on-profile: dev
+
+env: dev
+
+server:
+  port: 8080
