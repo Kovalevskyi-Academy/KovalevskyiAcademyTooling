@@ -6,7 +6,7 @@
 
   <parent>
     <artifactId>tooling-monorepo</artifactId>
-    <groupId>com.kovalevskyi.academy.codingbootcamp.tooling</groupId>
+    <groupId>com.kovalevskyi.academy.bootcamp.tooling</groupId>
     <version>${revision}</version>
   </parent>
 
@@ -14,7 +14,14 @@
   <name>Tooling :: Apps</name>
   <packaging>pom</packaging>
 
+  <properties>
+    <springframework.boot.version>2.4.1</springframework.boot.version>
+    <springframework.version>5.3.2</springframework.version>
+  </properties>
+
   <modules>
     <module>cli</module>
+    <module>portal</module>
+    <module>discord-bot</module>
   </modules>
 </project>

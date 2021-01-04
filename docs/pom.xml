@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.kovalevskyi.academy.codingbootcamp.tooling</groupId>
+    <groupId>com.kovalevskyi.academy.bootcamp.tooling</groupId>
     <artifactId>tooling-monorepo</artifactId>
     <version>${revision}</version>
   </parent>
@@ -30,7 +30,7 @@
               <doctype>docbook</doctype>
               <preserveDirectories>true</preserveDirectories>
               <relativeBaseDir>true</relativeBaseDir>
-              <imagesdir>./</imagesdir>
+<!--              <imagesdir>./</imagesdir>-->
             </configuration>
 
             <executions>
