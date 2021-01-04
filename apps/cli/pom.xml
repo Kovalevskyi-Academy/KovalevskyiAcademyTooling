@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.kovalevskyi.academy.codingbootcamp.tooling</groupId>
+    <groupId>com.kovalevskyi.academy.bootcamp.tooling</groupId>
     <artifactId>apps</artifactId>
     <version>${revision}</version>
   </parent>
@@ -14,10 +14,12 @@
   <name>Tooling :: Apps :: CLI</name>
 
   <properties>
-    <exec.mainClass>com.kovalevskyi.academy.codingbootcamp.tooling.apps.cli.Main</exec.mainClass>
-    <maven-assembly-plugin.descriptorSuffix>jar-with-dependencies</maven-assembly-plugin.descriptorSuffix>
+    <exec.mainClass>com.kovalevskyi.academy.bootcamp.tooling.apps.cli.Main</exec.mainClass>
+    <maven-assembly-plugin.descriptorSuffix>jar-with-dependencies
+    </maven-assembly-plugin.descriptorSuffix>
 
     <picocli.version>4.5.2</picocli.version>
+    <tongfei-progressbar.version>0.9.0</tongfei-progressbar.version>
   </properties>
 
   <build>
@@ -104,6 +106,15 @@
       <artifactId>picocli</artifactId>
       <version>${picocli.version}</version>
       <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>me.tongfei</groupId>
+      <artifactId>progressbar</artifactId>
+      <version>${tongfei-progressbar.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
     </dependency>
   </dependencies>
 </project>

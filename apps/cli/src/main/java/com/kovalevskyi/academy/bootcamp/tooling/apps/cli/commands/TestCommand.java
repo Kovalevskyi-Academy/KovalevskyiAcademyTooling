@@ -1,6 +1,7 @@
-package com.kovalevskyi.academy.codingbootcamp.tooling.apps.cli.commands;
+package com.kovalevskyi.academy.bootcamp.tooling.apps.cli.commands;
 
 import java.util.concurrent.Callable;
+import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -46,7 +47,8 @@ public class TestCommand implements Callable<Integer> {
   private String testSuite;
 
   @Override
-  public Integer call() throws Exception {
-    return null;
+  public Integer call() {
+
+    return CommandLine.ExitCode.OK;
   }
 }

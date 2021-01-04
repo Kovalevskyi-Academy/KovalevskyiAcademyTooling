@@ -1,4 +1,4 @@
-package com.kovalevskyi.academy.codingbootcamp.tooling.apps.cli.commands;
+package com.kovalevskyi.academy.bootcamp.tooling.apps.cli.commands;
 
 import java.util.concurrent.Callable;
 import picocli.CommandLine.Option;

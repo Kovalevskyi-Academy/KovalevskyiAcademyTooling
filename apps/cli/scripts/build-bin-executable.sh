@@ -20,12 +20,14 @@ if [ -f "${JAR_FILE}" ]; then
 #!/bin/bash
 
 MYSELF=\`which "\$0" 2>/dev/null\`
+[ -d "target" ] && CLASSPATH="target/classes:target/test-classes"
+echo "\$MYSELF:\$CLASSPATH";
 [ \$? -gt 0 -a -f "\$0" ] && MYSELF="./\$0"
 java=java
 if test -n "\$JAVA_HOME"; then
     java="\$JAVA_HOME/bin/java"
 fi
-exec "\$java" \$java_args -jar \$MYSELF "\$@"
+exec "\$java" -cp "\$MYSELF:\$CLASSPATH" com.kovalevskyi.academy.bootcamp.tooling.apps.cli.Main "\$@"
 exit 1
 
 EOF

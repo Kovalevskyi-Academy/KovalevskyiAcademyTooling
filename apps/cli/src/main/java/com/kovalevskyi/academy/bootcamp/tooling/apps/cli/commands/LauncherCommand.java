@@ -1,7 +1,9 @@
-package com.kovalevskyi.academy.codingbootcamp.tooling.apps.cli.commands;
+package com.kovalevskyi.academy.bootcamp.tooling.apps.cli.commands;
 
-import com.kovalevskyi.academy.codingbootcamp.tooling.apps.cli.Constants;
-import java.util.Locale;
+import com.kovalevskyi.academy.bootcamp.tooling.apps.cli.Constants;
+import java.nio.charset.StandardCharsets;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
 import java.util.concurrent.Callable;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
@@ -74,7 +76,7 @@ public class LauncherCommand implements Callable<Integer> {
   private static final CommandLine CLI = new CommandLine(new LauncherCommand())
       .setCommandName(Constants.CLI_NAME.toLowerCase())
       // .setResourceBundle(ResourceBundle.getBundle("i18n-messages"))
-      .setExecutionExceptionHandler(createExceptionHandler())
+      // .setExecutionExceptionHandler(createExceptionHandler())
       .addSubcommand(new HelpCommand())
       .addSubcommand(new ConfigCommand())
       .addSubcommand(new FetchCommand())
@@ -87,9 +89,24 @@ public class LauncherCommand implements Callable<Integer> {
 
   @Override
   public Integer call() {
+    printAsciiArt();
     CLI.usage(System.out);
 
     return CommandLine.ExitCode.OK;
+  }
+
+  private static void printAsciiArt() {
+    var inputStream = LauncherCommand.class.getResourceAsStream("/ascii-art.txt");
+
+    try {
+      Scanner s = new Scanner(inputStream, StandardCharsets.UTF_8).useDelimiter("\\A");
+      // String text = s.hasNext() ? s.next() : "";
+      String text = s.next();
+      System.out.println(text);
+    } catch (NoSuchElementException e) {
+      // logger.warn("Failed to load ASCII art.", e);
+      System.err.println("Failed to load ASCII art.");
+    }
   }
 
   public static void start(String[] args) {
