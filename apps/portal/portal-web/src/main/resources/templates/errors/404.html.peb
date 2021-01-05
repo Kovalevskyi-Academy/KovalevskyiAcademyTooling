@@ -1,6 +1,6 @@
 {% extends 'layouts/root.html' %}
 
-{% block meta_title %}Ошибка {{ status_code }}. Страница не найдена {% endblock %}
+{% block title %}Ошибка {{ status_code }}. Страница не найдена {% endblock %}
 {% block layout %}
     <div style="text-align: center; font-size: 144px;">404</div>
     <h1 style="text-align: center;">Страница не найдена</h1>

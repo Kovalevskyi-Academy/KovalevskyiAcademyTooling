@@ -1,3 +1,32 @@
-@import 'node_modules/mdbootstrap/scss/mdb-free.scss';
+@charset "UTF-8";
 
+@import "_variables";
+@import "node_modules/mdbootstrap/css/bootstrap.min";
 
+// Bootstrap
+@import "node_modules/mdbootstrap/scss/core/bootstrap/_functions";
+@import "node_modules/mdbootstrap/scss/core/bootstrap/_variables";
+
+// CORE
+@import "node_modules/mdbootstrap/scss/core/_mixins";
+@import "node_modules/mdbootstrap/scss/core/_colors";
+@import "node_modules/mdbootstrap/scss/core/_variables";
+@import "node_modules/mdbootstrap/scss/core/_global";
+@import "node_modules/mdbootstrap/scss/core/_helpers";
+
+@import "node_modules/mdbootstrap/scss/core/typography";
+
+@import "node_modules/mdbootstrap/scss/core/_masks";
+@import "node_modules/mdbootstrap/scss/core/_waves";
+
+// FREE
+@import "node_modules/mdbootstrap/scss/free/_animations-basic";
+@import "node_modules/mdbootstrap/scss/free/_buttons";
+@import "node_modules/mdbootstrap/scss/free/_cards";
+@import "node_modules/mdbootstrap/scss/free/_dropdowns";
+@import "node_modules/mdbootstrap/scss/free/_input-group";
+@import "node_modules/mdbootstrap/scss/free/_navbars";
+@import "node_modules/mdbootstrap/scss/free/_pagination";
+@import "node_modules/mdbootstrap/scss/free/_forms";
+@import "node_modules/mdbootstrap/scss/free/_msc";
+@import "node_modules/mdbootstrap/scss/free/_footers";

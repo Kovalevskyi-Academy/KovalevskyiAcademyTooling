@@ -31,9 +31,9 @@ gulp.task('copy-css', () =>
     })))
     .pipe(production(uglifycss()))
     .pipe(rev())
-    .pipe(gulp.dest('src/main/resources/static/css'))
+    .pipe(gulp.dest('target/classes/static/css'))
     .pipe(rev.manifest())
-    .pipe(gulp.dest('src/main/resources/static/css'))
+    .pipe(gulp.dest('target/classes/static/css'))
 );
 
 gulp.task('copy-js', () =>
@@ -41,19 +41,19 @@ gulp.task('copy-js', () =>
     .pipe(babel())
     .pipe(production(terser()))
     .pipe(rev())
-    .pipe(gulp.dest('src/main/resources/static/js'))
+    .pipe(gulp.dest('target/classes/static/js'))
     .pipe(rev.manifest())
-    .pipe(gulp.dest('src/main/resources/static/js'))
+    .pipe(gulp.dest('target/classes/static/js'))
 );
 
 gulp.task('rev-rewrite', function() {
-  const manifestCss = readFileSync('src/main/resources/static/css/rev-manifest.json');
-  const manifestJs = readFileSync('src/main/resources/static/js/rev-manifest.json');
+  const manifestCss = readFileSync('target/classes/static/css/rev-manifest.json');
+  const manifestJs = readFileSync('target/classes/static/js/rev-manifest.json');
 
   return gulp.src('src/main/resources/templates/layouts/*.html.peb')
     .pipe(revRewrite({ manifest: manifestCss }))
     .pipe(revRewrite({ manifest: manifestJs }))
-    .pipe(gulp.dest('src/main/resources/templates/layouts/'));
+    .pipe(gulp.dest('target/classes/templates/layouts/'));
 });
 
 gulp.task('copy-css-and-reload', gulp.series('copy-css', reload));

@@ -3,7 +3,7 @@
 {% block css %}
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<link href="/css/app-5494d4efb9.css" rel="stylesheet" type="text/css" />
+<link href="/css/app.css" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block layout %}
@@ -13,5 +13,5 @@
 {% endblock %}
 
 {% block footer_js %}
-<script src='/js/app-d235001fca.js'></script>
+<script src='/js/app.js'></script>
 {% endblock %}
