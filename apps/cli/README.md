@@ -1,11 +1,11 @@
 # Project Talos
 
-[![Docs](https://github.com/straybro/KovalevskyiAcademyTooling/workflows/Deploy%20documentation/badge.svg)](https://straybro.github.io/KovalevskyiAcademyTooling/)
-[![Build CI](https://github.com/straybro/KovalevskyiAcademyTooling/workflows/Build%20CLI/badge.svg)](https://github.com/straybro/KovalevskyiAcademyTooling/actions?query=workflow%3A%22Build+CLI%22)
+[![Docs](https://github.com/Kovalevskyi-Academy/KovalevskyiAcademyTooling/workflows/Deploy%20documentation/badge.svg)](https://kovalevskyi-academy.github.io/KovalevskyiAcademyTooling/)
+[![Build CI](https://github.com/Kovalevskyi-Academy/KovalevskyiAcademyTooling/workflows/Build%20CLI/badge.svg)](https://github.com/Kovalevskyi-Academy/KovalevskyiAcademyTooling/actions?query=workflow%3A%22Build+CLI%22)
 [![google-java-styleguide](https://img.shields.io/badge/style-guide-orange.svg)](https://google.github.io/styleguide/javaguide.html)
 
 A CLI application to utilize working with assignments during **Kovalevskyi Academy Java Coding Bootcamp**.
-See [docs](https://straybro.github.io/KovalevskyiAcademyTooling/) to learn more.
+See [docs](https://kovalevskyi-academy.github.io/KovalevskyiAcademyTooling/) to learn more.
 
 **NOTE: Talos has been only tested on Linux.**
 
