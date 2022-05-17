@@ -23,6 +23,6 @@
     "gulp-watch": "^5.0.1",
     "gulp-rev": "^9.0.0",
     "gulp-rev-rewrite": "^4.0.0",
-    "axios": ">=0.21.1"
+    "axios": ">=0.21.2"
   }
 }
